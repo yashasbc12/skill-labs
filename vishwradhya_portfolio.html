@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Vishwradhya S Vastrad — Portfolio</title>
+<style>
+:root{--bg:#f5f5f4;--ink:#1d1d1f;--muted:#6e6e73;--card:#fff;--accent:#0071e3;--dark:#0b0b0c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.06)}
+nav a{color:var(--ink);text-decoration:none;font-size:14px;margin-left:22px;opacity:.8}
+nav a:hover{opacity:1}
+.logo{font-weight:650;letter-spacing:-.02em}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 24px 60px;position:relative;overflow:hidden}
+.badge{display:inline-block;font-size:13px;color:var(--muted);border:1px solid rgba(0,0,0,.1);padding:6px 14px;border-radius:999px;background:#fff}
+h1{font-size:clamp(42px,8vw,92px);font-weight:700;letter-spacing:-.045em;margin:22px 0 12px}
+.grad{background:linear-gradient(90deg,#0071e3,#7d4dff,#ff5f6d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{max-width:640px;margin:0 auto;color:var(--muted);font-size:clamp(16px,2.2vw,21px)}
+.cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{padding:13px 26px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:600}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid rgba(0,0,0,.12)}
+#scene{position:absolute;inset:0;z-index:-1}
+section{max-width:1100px;margin:0 auto;padding:90px 24px}
+h2{font-size:clamp(30px,4.5vw,48px);letter-spacing:-.03em;margin-bottom:16px}
+.eyebrow{color:var(--accent);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:36px}
+.card{background:var(--card);border-radius:22px;padding:28px;border:1px solid rgba(0,0,0,.06);box-shadow:0 10px 30px rgba(0,0,0,.05);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover{box-shadow:0 20px 50px rgba(0,0,0,.10)}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:12px;background:#f0f0f2;border-radius:999px;padding:5px 11px;color:#3a3a3c}
+.dark{background:var(--dark);color:#f5f5f7;border-radius:34px;padding:70px 30px;text-align:center}
+.dark h2{color:#fff}
+.dark p{color:#a1a1a6;max-width:620px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:40px;text-align:left}
+.stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:24px}
+.stat b{display:block;font-size:22px;letter-spacing:-.02em;margin-bottom:6px}
+.stat span{color:#a1a1a6;font-size:14px}
+footer{text-align:center;color:var(--muted);padding:50px 20px;font-size:14px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Vishwradhya S Vastrad</div>
+  <div><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero">
+  <canvas id="scene"></canvas>
+  <div>
+    <span class="badge">Engineering • Mathematics • Building things that work</span>
+    <h1>Hi, I’m <span class="grad">Vishwradhya</span>.</h1>
+    <p class="sub">A STEM-focused engineer and problem solver crafting clean, precise, and useful digital experiences — with a strong foundation in mathematics, electronics, and programming.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">View my work</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="eyebrow">Selected work</div>
+  <h2>Projects with purpose</h2>
+  <div class="grid">
+    <div class="card"><h3>ESP32 Sensor System</h3><p>IoT project using an ESP32 and turbidity sensor for real-time water-quality monitoring and data logging.</p><div class="tags"><span class="tag">ESP32</span><span class="tag">IoT</span><span class="tag">Sensors</span></div></div>
+    <div class="card"><h3>Numerical Methods Toolkit</h3><p>Calculator-ready implementations and visual explanations for Gauss–Seidel, eigenvalue methods, and regression analysis.</p><div class="tags"><span class="tag">Numerical Methods</span><span class="tag">MATLAB</span><span class="tag">Linear Algebra</span><span class="tag">Python</span></div></div>
+    <div class="card"><h3>Engineering Study Hub</h3><p>Organized notes, solved problems, and exam-prep resources for calculus, statistics, and engineering mathematics.</p><div class="tags"><span class="tag">Calculus</span><span class="tag">Statistics</span><span class="tag">Education</span></div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="dark">
+    <div class="eyebrow">Skills</div>
+    <h2>Precise. Practical. Polished.</h2>
+    <p>I combine mathematical rigor with hands-on engineering—turning concepts into working prototypes and clear technical solutions.</p>
+    <div class="stats">
+      <div class="stat"><b>Numerical Methods</b><span>Gauss–Seidel, Newton–Raphson, interpolation, numerical integration, error analysis</span></div>
+      <div class="stat"><b>Linear Algebra</b><span>Matrices, eigenvalues, eigenvectors, Rayleigh power method, systems of equations</span></div>
+      <div class="stat"><b>Programming</b><span>Python, MATLAB, Arduino / ESP32, scientific calculator workflows</span></div>
+      <div class="stat"><b>Hardware & IoT</b><span>Sensors, embedded prototyping, ESP32, data acquisition</span></div>
+      <div class="stat"><b>Mathematics</b><span>Calculus, differential equations, statistics, regression analysis</span></div>
+      <div class="stat"><b>Analysis</b><span>Data interpretation, convergence checks, approximation and modeling</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="eyebrow">Contact</div>
+  <h2>Let’s build something.</h2>
+  <p class="sub">Open to engineering projects, technical collaborations, and opportunities where careful thinking meets real-world impact.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:your.email@example.com">Email me</a>
+    <a class="btn ghost" href="#">LinkedIn</a>
+    <a class="btn ghost" href="#">GitHub</a>
+  </div>
+</section>
+
+<footer>© 2026 Vishwradhya S Vastrad. Designed with clarity in mind.</footer>
+
+<script>
+const c=document.getElementById('scene'),x=c.getContext('2d');
+let w,h,pts=[];
+function resize(){w=c.width=innerWidth;h=c.height=innerHeight;pts=[];for(let i=0;i<90;i++)pts.push({x:Math.random()*w,y:Math.random()*h,z:Math.random(),r:Math.random()*2+1,v:Math.random()*.4+.15})}
+addEventListener('resize',resize);resize();
+function draw(){x.clearRect(0,0,w,h);
+ for(const p of pts){p.y-=p.v;if(p.y<-10){p.y=h+10;p.x=Math.random()*w}
+  const s=.5+p.z,g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*8*s);
+  g.addColorStop(0,'rgba(0,113,227,.35)');g.addColorStop(1,'rgba(0,113,227,0)');
+  x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*8*s,0,7);x.fill()}
+ requestAnimationFrame(draw)}
+draw();
+document.querySelectorAll('.card').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect(),rx=(e.clientY-r.top)/r.height-.5,ry=(e.clientX-r.left)/r.width-.5;card.style.transform=`perspective(700px) rotateX(${-rx*7}deg) rotateY(${ry*7}deg) translateY(-6px)`});card.addEventListener('mouseleave',()=>card.style.transform='')});
+</script>
+</body>
+</html>
