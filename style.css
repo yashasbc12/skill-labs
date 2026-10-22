@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+min-height: 100vh;
+font-family: Arial, sans-serif;
+background: #070714;
+color: white;
+text-align: center;
+padding: 40px 20px;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    background: #5425b5;
+    filter: blur(150px);
+    opacity: 0.5;
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: #007bff;
+    filter: blur(150px);
+    opacity: 0.4;
+    bottom: 5%;
+    right: 10%;
+    z-index: -1;
+}
+
+h1 {
+    font-size: clamp(32px, 6vw, 60px);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #00eaff;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 550px;
+    color: #b9b9d0;
+    line-height: 1.8;
+    margin: 0 auto 30px;
+}
+
+button {
+    padding: 15px 25px;
+    background: linear-gradient(90deg, #00eaff, #a855f7);
+    color: #080816;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #00eaff66;
+}
+.profile-photo {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+
+    border: 2px solid #00eaff;
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 20px #00eaff66,
+        0 0 50px #8b5cf644;
+
+    margin: 25px auto;
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.profile-photo:hover {
+    transform: perspective(600px) rotateY(10deg) scale(1.05);
+}
+
+
+
+.profile-photo {
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0) rotateY(-5deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotateY(5deg);
+    }
+}
+
+.projects {
+margin-top: 60px;
+width: 100%;
+max-width: 1000px;
+}
+
+.projects h2 {
+font-size: 32px;
+margin-bottom: 30px;
+}
+
+.project-card {
+background: rgba(255, 255, 255, 0.05);
+border: 1px solid #00eaff66;
+border-radius: 15px;
+padding: 25px;
+margin: 20px auto;
+max-width: 600px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+backdrop-filter: blur(10px);
+}
+
+.project-card h3 {
+color: #00eaff;
+margin-bottom: 12px;
+}
+
+.project-card p {
+color: #b9b9d0;
+line-height: 1.6;
+margin-bottom: 0;
+}
+
+.project-card:hover {
+transform: perspective(800px) rotateY(5deg) translateY(-8px);
+box-shadow: 0 0 25px #00eaff44;
+}
+
+/* Navigation Bar */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+margin-bottom: 50px;
+border: 1px solid #00eaff33;
+border-radius: 15px;
+background: rgba(255, 255, 255, 0.04);
+backdrop-filter: blur(10px);
+}
+
+.logo {
+font-size: 26px;
+font-weight: bold;
+color: white;
+letter-spacing: 2px;
+}
+
+.logo span {
+color: #00eaff;
+}
+
+.navbar ul {
+display: flex;
+list-style: none;
+gap: 30px;
+}
+
+.navbar a {
+text-decoration: none;
+color: #b9b9d0;
+font-size: 16px;
+transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+color: #00eaff;
+text-shadow: 0 0 10px #00eaff;
+}
